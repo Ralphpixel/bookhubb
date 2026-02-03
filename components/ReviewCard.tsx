@@ -74,10 +74,11 @@
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { deleteDoc, doc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import LikeButton from "./LikeButton";
+// import { db } from "@/lib/firebase";
+// import LikeButton from "./LikeButton";
 import Comments from "./Comments";
 import { BiTrashAlt } from "react-icons/bi";
+import { db } from "../lib/firebase";
 
 
 type Review = {
@@ -127,10 +128,10 @@ export default function ReviewCard({ review }: { review: Review }) {
         </button>
       )}
       
-<LikeButton
+{/* <LikeButton
   reviewId={review.id}
   reviewOwnerId={review.userId}
-/>
+/> */}
 
 <Comments
   reviewId={review.id}

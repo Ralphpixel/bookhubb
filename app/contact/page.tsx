@@ -2,7 +2,8 @@
 
 import { Formik, Form, Field } from "formik";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "../../lib/firebase";
+// import { db } from "@/lib/firebase";
 
 export default function ContactPage() {
   return (

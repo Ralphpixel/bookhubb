@@ -57,8 +57,10 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import ReviewCard from "@/components/ReviewCard";
+import ReviewCard from "../../components/ReviewCard";
+import { db } from "../../lib/firebase";
+// import { db } from "@/lib/firebase";
+// import ReviewCard from "@/components/ReviewCard";
 
 export default function ReviewsPage() {
   const [reviews, setReviews] = useState<any[]>([]);

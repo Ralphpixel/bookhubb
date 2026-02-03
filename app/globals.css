@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .auth-btn {
   width: 100%;
   padding: 0.75rem;
@@ -20,11 +23,11 @@ body {
 .auth-btn:hover {
   background: #f3f4f6;
 }
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
 
 .font-raleway {
   font-family: "Raleway", sans-serif;
 }
+
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }

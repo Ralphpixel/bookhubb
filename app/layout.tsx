@@ -1,12 +1,11 @@
+
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "./globals.css";
 import Providers from "./providers";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "BookHub",
-  description: "Built with ❤️ for readers",
-};
+
+
 
 export default function RootLayout({
   children,
@@ -15,12 +14,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="font-raleway min-h-screen flex flex-col">
         <Providers>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </Providers>
+
+
+          <main className="flex-1">
+            {children}
+          </main>
+
+<Footer />
+</Providers>
       </body>
     </html>
   );

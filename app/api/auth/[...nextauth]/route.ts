@@ -7,7 +7,8 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "../../../../lib/firebase";
+// import { db } from "@/lib/firebase";
 
 const handler = NextAuth({
   providers: [

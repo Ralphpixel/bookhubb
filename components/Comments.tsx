@@ -13,8 +13,8 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import { createNotification } from "@/lib/notifications";
+import { db } from "../lib/firebase";
+
 
 export default function Comments({
   reviewId,

@@ -81,7 +81,8 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { addDoc, collection, serverTimestamp, doc, getDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "../../lib/firebase";
+
 
 export default function AddReviewPage() {
   const { data: session, status } = useSession();
