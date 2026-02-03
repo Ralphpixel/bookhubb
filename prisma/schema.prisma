@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  image     String?
+  createdAt DateTime @default(now())
+
+  reviews   Review[]
+  saved     SavedBook[]
+}
+
+model Book {
+  id          String   @id // use Google Books volumeId
+  title       String
+  authors     String?
+  thumbnail   String?
+  categories  String?
+  createdAt   DateTime @default(now())
+
+  reviews     Review[]
+  savedBy     SavedBook[]
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  rating    Int      // 1..5
+  content   String?
+  createdAt DateTime @default(now())
+
+  userId    String
+  bookId    String
+
+  user      User     @relation(fields: [userId], references: [id])
+  book      Book     @relation(fields: [bookId], references: [id])
+
+  @@unique([userId, bookId]) // one review per user per book
+}
+
+model SavedBook {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  userId    String
+  bookId    String
+
+  user      User     @relation(fields: [userId], references: [id])
+  book      Book     @relation(fields: [bookId], references: [id])
+
+  @@unique([userId, bookId])
+}
