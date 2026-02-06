@@ -252,6 +252,7 @@
 "use client";
 
 import { useState } from "react";
+import { searchBooks } from "../../lib/books";
 
 
 export default function BooksPage() {
