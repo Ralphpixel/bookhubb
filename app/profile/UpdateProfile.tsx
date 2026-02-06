@@ -114,7 +114,8 @@
 import { useEffect, useState } from "react";
 import { doc, getDoc, updateDoc, setDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth, db } from "@/lib/firebase";
+import { auth, db } from "../../lib/firebase";
+// import { auth, db } from "@/lib/firebase";
 
 export default function UpdateProfile() {
   const [user, setUser] = useState<any>(null);

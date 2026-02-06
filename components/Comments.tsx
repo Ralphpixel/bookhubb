@@ -14,6 +14,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../lib/firebase";
+import { createNotification } from "../lib/notifications";
 
 
 export default function Comments({

@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import AuthButtons from "@/components/AuthButtons";
+// import AuthButtons from "@/components/AuthButtons";
 
 export default async function SignupPage() {
   const session = await getServerSession();
@@ -19,7 +19,7 @@ export default async function SignupPage() {
             Create an account and build your personal library.
           </p>
 
-          <AuthButtons />
+         
         </div>
       </div>
 

@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+// import { db } from "@/lib/firebase";
 import { useSession } from "next-auth/react";
 import ReviewCard from "./ReviewCard";
+import { db } from "../lib/firebase";
 
 export default function MyReviews() {
   const { data: session } = useSession();
