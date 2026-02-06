@@ -6,7 +6,8 @@ import {
   onSnapshot,
   serverTimestamp,
 } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "./firebase";
+// import { db } from "@/lib/firebase";
 
 export function listenToComments(
   bookId: string,

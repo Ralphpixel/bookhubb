@@ -2,7 +2,7 @@
 
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { db } from "@/lib/firebase";
+// import { db } from "@/lib/firebase";
 import ReviewCard from "./ReviewCard";
 
 export default function ReviewsList() {
