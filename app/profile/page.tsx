@@ -346,7 +346,7 @@ export default function ProfilePage() {
     }
   };
 
-  // ONLY block while NextAuth is loading
+
   if (status === "loading") {
     return <div className="text-center mt-20">Loading profile…</div>;
   }

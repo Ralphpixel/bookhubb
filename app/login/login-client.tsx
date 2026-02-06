@@ -7,7 +7,7 @@ export default function LoginClient() {
   return (
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-br from-indigo-100 to-blue-50">
 
-      {/* LEFT LOGIN CARD */}
+      {/* LOGIN CARD */}
       <div className="flex items-center justify-center">
         <div className="bg-white p-8 rounded-2xl shadow-xl w-[360px] space-y-5">
           <h1 className="text-2xl font-bold text-gray-900">

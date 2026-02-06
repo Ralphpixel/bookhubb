@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 
-/*FEATURED BOOK DATA */
+/* BOOK DATA */
 
 const featuredBooks = [
   {

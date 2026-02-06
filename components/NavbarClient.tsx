@@ -58,7 +58,7 @@ export default function NavbarClient() {
               )}
             </div>
 
-            {/* AUTH SECTION — THIS IS WHERE THE GAP FIX IS */}
+            {/* AUTH SECTION*/}
             <div className="flex items-center gap-4 pl-6 border-l">
               {!session ? (
                 <>

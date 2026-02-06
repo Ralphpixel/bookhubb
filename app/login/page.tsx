@@ -23,7 +23,7 @@ export default async function LoginPage() {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
+      {/* IMAGE */}
       <div className="relative hidden md:block">
         <Image
           src="/bookk.jpg"

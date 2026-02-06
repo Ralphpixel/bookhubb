@@ -124,7 +124,7 @@ export default function UpdateProfile() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
-  // 🔐 Get logged-in Firebase user
+  //  Get logged-in Firebase user
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
       if (!u) {
@@ -135,7 +135,7 @@ export default function UpdateProfile() {
 
       setUser(u);
 
-      // 🔎 Load existing profile
+      //  Load existing profile
       const ref = doc(db, "users", u.uid);
       const snap = await getDoc(ref);
 
@@ -149,7 +149,7 @@ export default function UpdateProfile() {
     return () => unsub();
   }, []);
 
-  // 💾 Save profile
+  // Save profile
   const handleUpdate = async () => {
     if (!user || !username.trim()) return;
 
@@ -177,12 +177,12 @@ export default function UpdateProfile() {
     }
   };
 
-  // ⏳ Loading state
+  // Loading state
   if (loading) {
     return <p className="text-center mt-20">Loading profile…</p>;
   }
 
-  // 🚫 Not logged in
+  //  Not logged in
   if (!user) {
     return (
       <p className="text-center mt-20 text-red-500">
